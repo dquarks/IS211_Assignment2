@@ -1,5 +1,6 @@
 import re
 import csv
+import sys
 import logging
 import argparse
 import urllib2
@@ -40,6 +41,8 @@ def displayPerson(id, personData):
 
 def main():
     logging.basicConfig(filename='erorr.log', filemode='w', level=logging.ERROR, format='%(message)s')
+    if len(sys.argv) <= 2:
+        exit()
     parser = argparse.ArgumentParser()
     parser.add_argument('--url', help='Enter a URL whose data we will access')
     arg = parser.parse_args()
