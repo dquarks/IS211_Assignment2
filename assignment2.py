@@ -55,5 +55,5 @@ def main():
             else:
                 displayPerson(int(input), personData)
     except Exception as exception:
-        errorL('Invalid URL: ' + str(exception))
+        errorL('Error: ' + str(exception))
 main()
