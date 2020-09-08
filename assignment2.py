@@ -38,7 +38,6 @@ def displayPerson(id, personData):
     else:
         print('Person #' + str(id) + ' is ' + personData[id].get('name') + ', with a birthday of ' + str(personData[id].get('bday')))
 
-
 def main():
     logging.basicConfig(filename='erorr.log', filemode='w', level=logging.ERROR, format='%(message)s')
     if len(sys.argv) <= 2:
